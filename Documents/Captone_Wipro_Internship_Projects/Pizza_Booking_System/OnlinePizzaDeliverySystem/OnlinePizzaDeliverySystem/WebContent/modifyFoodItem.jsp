@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<style>
+
+html{
+background: url(image/back_LogIn.jpg) no-repeat center center fixed #000; 
+-webkit-background-size: cover; 
+-moz-background-size: cover; 
+-o-background-size: cover; 
+background-size: cover;
+}
+.text-center{
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="style/logIn.css">
+</head>
+<body>
+
+<%
+if(session.getAttribute("username") == null)
+{
+	response.sendRedirect("logIn.jsp");
+}
+%>
+
+<div class = "box">
+	<form action="modifyFoodItem" method = "post">
+		<span class="text-center">Modify Food Item</span>
+			<div class="input-container">
+				<input type = "number" name = "foodId">
+				<label style="font-size: 16px"><b>Food Id</b></label>
+			</div>
+			<div class="input-container">
+				<input type = "text" name = "foodName">
+				<label style="font-size: 16px"><b>Food Name</b></label>
+			</div>
+			<div class="input-container">
+				<input type = "number" name = "cost">
+				<label style="font-size: 16px"><b>Cost</b></label>
+			</div>
+	 <button class="btn" type = "submit"><b>Modify Food</b></button>
+</div>
+	
+	</form>
+</body>
+</html>
