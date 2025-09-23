@@ -1,0 +1,7 @@
+package com.Self_Project.Air_Bnb_System.entity.enums;
+
+public enum Gender {
+    MALE,
+    FEMALE,
+    OTHER
+}
