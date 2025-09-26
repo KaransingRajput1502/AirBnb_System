@@ -29,7 +29,7 @@ public class HotelBrowseController {
         Page<HotelDto> page = inventoryService.searchHotels(hotelSearchRequest);
         return ResponseEntity.ok(page);
     }*/
-
+//demo
     //new search hotels by using min price
     @GetMapping("/search")
     public ResponseEntity<Page<HotelPriceDto>> searchHotels(@RequestBody HotelSearchRequest hotelSearchRequest) {

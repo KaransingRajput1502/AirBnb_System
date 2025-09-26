@@ -21,8 +21,11 @@ public class HotelController {
     @PostMapping
     public ResponseEntity<HotelDto> createNewHotel(@Valid @RequestBody HotelDto hotelDto) {
         log.info("Attempting to create a new hotel with name :" +hotelDto.getName());
-        HotelDto hotelDto1 = hotelService.createNewHotel(hotelDto);
-        return new ResponseEntity<>(hotelDto1, HttpStatus.CREATED);
+        //HotelDto hotelDto1 = hotelService.createNewHotel(hotelDto);
+        //return new ResponseEntity<>(hotelDto1, HttpStatus.CREATED);
+        return null;
+
+        //demo
     }
 
     @GetMapping("/{hotelId}")

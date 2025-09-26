@@ -30,5 +30,5 @@ public class HotelBookingController {
 
         return ResponseEntity.ok(bookingService.addGuests(bookingId, guestDtoList));
     }
-
+//demo
 }
