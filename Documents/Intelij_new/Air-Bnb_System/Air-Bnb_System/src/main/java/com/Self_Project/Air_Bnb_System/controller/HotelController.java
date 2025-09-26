@@ -23,6 +23,7 @@ public class HotelController {
         log.info("Attempting to create a new hotel with name :" +hotelDto.getName());
         HotelDto hotelDto1 = hotelService.createNewHotel(hotelDto);
         return new ResponseEntity<>(hotelDto1, HttpStatus.CREATED);
+        //karan
     }
 
     @GetMapping("/{hotelId}")
