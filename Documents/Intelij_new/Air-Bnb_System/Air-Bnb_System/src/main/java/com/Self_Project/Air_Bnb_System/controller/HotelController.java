@@ -22,8 +22,8 @@ public class HotelController {
     public ResponseEntity<HotelDto> createNewHotel(@Valid @RequestBody HotelDto hotelDto) {
         log.info("Attempting to create a new hotel with name :" +hotelDto.getName());
         HotelDto hotelDto1 = hotelService.createNewHotel(hotelDto);
-        //return new ResponseEntity<>(hotelDto1, HttpStatus.CREATED);
-        return null;
+        return new ResponseEntity<>(hotelDto1, HttpStatus.CREATED);
+       // return null;
         //karan
     }
 
