@@ -17,6 +17,7 @@ import java.util.List;
 @RequestMapping("/bookings")
 public class HotelBookingController {
 
+    //Hi
     private final BookingService bookingService;
 
     @PostMapping("/init")
